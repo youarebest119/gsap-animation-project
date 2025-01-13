@@ -38,6 +38,21 @@ const Me = () => {
                 duration: 2,
                 clipPath: "circle(100% at 50% 50%)",
             }, "+=0.2")
+
+
+        gsap
+            .timeline({
+                scrollTrigger: {
+                    trigger: ".me_in p",
+                    start: "top 50%",
+                    toggleActions: "play none none reverse",
+                }
+            })
+            .from(paragraph.words, {
+                yPercent: 100,
+                // stagger: 0.05,
+                opactiy: 0,
+            })
     })
 
     return (

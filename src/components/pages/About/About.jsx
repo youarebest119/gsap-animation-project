@@ -1,11 +1,11 @@
 import React from 'react';
 import "./About.scss";
+import AboutGallery from './AboutGallery/AboutGallery';
 import Banner from './Banner/Banner';
 import Me from './Me/Me';
-import AboutSlider from './AboutSlider/AboutSlider';
-import Services from './Services/Services';
-import RecentWork from './RecentWork/RecentWork';
 import RecentProject from './RecentProject/RecentProject';
+import RecentWork from './RecentWork/RecentWork';
+import Services from './Services/Services';
 
 const About = () => {
     return (
@@ -15,8 +15,10 @@ const About = () => {
             <Services />
             <RecentWork />
             <RecentProject />
-            {/* <AboutSlider /> */}
+            <AboutGallery />
+            {/* <Jungle /> */}
             <div style={{ height: "100dvh" }} />
+            {/* <AboutSlider /> */}
         </>
     )
 }

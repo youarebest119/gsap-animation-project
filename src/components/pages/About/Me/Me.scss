@@ -21,6 +21,9 @@
         font-weight: 500;
         text-transform: uppercase;
         color: rgba($white, 1);
+        .l {
+            overflow: clip;
+        }
     }
 
     .about_slider_in {

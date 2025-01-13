@@ -1,6 +1,6 @@
 import { OrbitControls, useGLTF } from '@react-three/drei'
 import { useThree } from '@react-three/fiber'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from "three";
 import { useHelper } from '@react-three/drei';
 import { useGSAP } from '@gsap/react';
@@ -11,6 +11,7 @@ import useMousePosition from './useMousePosition';
 gsap.registerPlugin(SplitText);
 
 const BannerExperience = ({ banner }) => {
+    const [active, setActive] = useState(false);
     const { camera } = useThree()
     const cone = useGLTF("/cone.glb");
     const box = useGLTF("/box.glb");
@@ -18,6 +19,9 @@ const BannerExperience = ({ banner }) => {
     const lightRef = useRef();
     const { x, y } = useMousePosition(banner);
 
+    useEffect(() => {
+        document.body.style.overflow = active ? "" : "hidden";
+    }, [active])
 
     // Attach the helper to the light
     // useHelper(lightRef, THREE.DirectionalLightHelper, 2, "red");
@@ -26,6 +30,7 @@ const BannerExperience = ({ banner }) => {
         gsap.to(camera.position, {
             x: gsap.utils.normalize(0, 1920, x) * 2,
             y: 0.5 - gsap.utils.normalize(0, window.innerHeight, y) * 2,
+            duration: 1,
         })
     }, { dependencies: [x, y] })
 
@@ -56,6 +61,7 @@ const BannerExperience = ({ banner }) => {
             .timeline(
                 {
                     delay: 1,
+                    onComplete: () => setActive(true),
                 }
             )
             .from(sortFromCenter(subtitle.chars), {
