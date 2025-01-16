@@ -1,4 +1,4 @@
-@import "../../../../assets/theme/_var.scss";
+@use "../../../../assets/theme/_var.scss";
 
 .recent_project_design {
     padding: 10rem 0;
@@ -13,7 +13,7 @@
     h2 {
         >div {
             position: relative;
-            color: rgba($white, 0.1);
+            color: rgba(var.$white, 0.1);
 
             span {
                 position: absolute;

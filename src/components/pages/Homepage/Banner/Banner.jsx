@@ -31,7 +31,7 @@ const Banner = () => {
                         })
                         .to(".banner_in", {
                             scale: 1.2,
-                            x: -100,
+                            x: document.body.clientWidth > 575 ? -100 : 0,
                         }, "0")
                         .to(".banner_txt h1 span", {
                             xPercent: -50,

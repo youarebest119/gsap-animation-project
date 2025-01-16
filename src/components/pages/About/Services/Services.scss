@@ -1,4 +1,4 @@
-@import "../../../../assets/theme/_var.scss";
+@use "../../../../assets/theme/_var.scss";
 
 .services {
     min-height: 100dvh;
@@ -9,7 +9,7 @@
     // padding-top: 100dvh;
 
     .services_sec {
-        background-color: $bodybg;
+        background-color: var.$bodybg;
         // margin-top: 100dvh;
         // padding-top: 100dvh;
     }

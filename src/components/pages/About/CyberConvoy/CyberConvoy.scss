@@ -1,4 +1,4 @@
-@import "../../../../assets/theme/_var.scss";
+@use "../../../../assets/theme/_var.scss";
 
 .cyber_convoy_design {
     height: 100dvh;
@@ -34,7 +34,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: $bodybg;
+            background: var.$bodybg;
             position: absolute;
             top: 0;
             left: 0;
@@ -173,7 +173,7 @@
     }
 
     .future_in {
-        background-color: $cardbg;
+        background-color: var.$cardbg;
         padding: 4rem;
         min-height: calc(100dvh - 20rem);
         display: flex;
@@ -193,7 +193,7 @@
             p {
                 font-size: 2rem;
                 font-weight: 400;
-                color: rgba($textclr, 0.6);
+                color: rgba(var.$textclr, 0.6);
                 margin: 2rem 0;
             }
 
@@ -201,12 +201,12 @@
                 width: 20rem;
                 height: 5.4rem;
                 border-radius: 5rem;
-                background-color: $bodybg;
+                background-color: var.$bodybg;
                 font-size: 1.6rem;
                 border: none;
                 outline: none;
-                border: 2px solid rgba($textclr, 0.2);
-                color: $white;
+                border: 2px solid rgba(var.$textclr, 0.2);
+                color: var.$white;
 
             }
         }

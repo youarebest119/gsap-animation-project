@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./CyberConvoy.scss";
 import { Container } from 'react-bootstrap';
 import bg1 from "../../../../assets/images/home1.png.webp"
@@ -7,6 +7,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 const CyberConvoy = () => {
+    const scope =useRef();
     useGSAP(() => {
         // gsap.set(".design_in", {
         //     clipPath: "inset(0% 35% 0% 35% round 3rem)",
@@ -14,12 +15,12 @@ const CyberConvoy = () => {
         gsap
             .timeline({
                 scrollTrigger: {
-                    trigger: ".cyber_convoy_design",
+                    trigger: scope.current,
                     pin: true,
                     scrub: 1,
                     start: "top top",
                     end: "+=500%",
-                    markers: true,
+                    markers: false,
                 }
             })
             .fromTo(".design_in",
@@ -82,10 +83,10 @@ const CyberConvoy = () => {
             .from(".eagle_eyed_txt h2", {
                 filter: "blur(2rem)",
                 scale: 0,
-                opactiy: 0,
+                opacity: 0,
             }, "<")
 
-            .to(".eag_eyed_txt", { duration: 0.1 })
+            .to(".eagle_eyed_txt", { duration: 0.1 })
 
             .to(".eagle_eyed_txt", {
                 scale: 2,
@@ -109,7 +110,7 @@ const CyberConvoy = () => {
             }, "-=0.3");
 
 
-    })
+    } , {scope})
     const dotsCount = 30;
     const dots = Array.from({ length: dotsCount }).map(() => ({
         x: Math.random() * 100, // Random percentage for horizontal position
@@ -118,7 +119,7 @@ const CyberConvoy = () => {
     }));
     return (
         <>
-            <section className="cyber_convoy_design">
+            <section ref={scope} className="cyber_convoy_design">
                 <div className="design_out">
                     <div className="design_in">
                         <div className="design_eye">

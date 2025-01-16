@@ -1,9 +1,8 @@
-@import "../../../../assets/theme/_var.scss";
+@use "../../../../assets/theme/_var.scss";
 
 .about_gallery {
     position: relative;
     z-index: 1;
-    border: 2px solid white;
     width: 100%;
     height: 100dvh;
     overflow: clip;
@@ -16,7 +15,7 @@
         width: 0.8rem;
         height: 40rem;
         border-radius: 5rem;
-        background-color: rgba($white, 0.1);
+        background-color: rgba(var.$white, 0.1);
         display: flex;
         flex-direction: column;
         overflow: hidden;

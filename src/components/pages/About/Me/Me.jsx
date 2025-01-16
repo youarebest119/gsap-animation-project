@@ -31,7 +31,7 @@ const Me = () => {
             .from(gsap.utils.shuffle([...paragraph.words, ...title.words]), {
                 duration: 0.1,
                 stagger: 0.05,
-                opactiy: 0,
+                // opacity: 0,
                 color: "rgba(255, 255, 255, 0.2)",
             })
             .to(".about_slider_in", {
@@ -51,7 +51,7 @@ const Me = () => {
             .from(paragraph.words, {
                 yPercent: 100,
                 // stagger: 0.05,
-                opactiy: 0,
+                // opacity: 0,
             })
     })
 

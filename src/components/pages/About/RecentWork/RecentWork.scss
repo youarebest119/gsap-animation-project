@@ -1,4 +1,4 @@
-@import "../../../../assets/theme/_var.scss";
+@use "../../../../assets/theme/_var.scss";
 
 .recent_work_design {
     .recent_work_in {
@@ -13,7 +13,7 @@
 
             >div {
                 position: relative;
-                color: rgba($white, 0.1);
+                color: rgba(var.$white, 0.1);
 
                 span {
                     position: absolute;
@@ -76,7 +76,7 @@
             display: block;
             margin: 4rem auto;
             opacity: 1;
-            color: rgba($white, 0.1);
+            color: rgba(var.$white, 0.1);
         }
 
         .recent_work_data {}

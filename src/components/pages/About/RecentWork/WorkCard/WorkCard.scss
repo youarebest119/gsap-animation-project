@@ -1,4 +1,4 @@
-@import "../../../../../assets/theme/_var.scss";
+@use "../../../../../assets/theme/_var.scss";
 
 .work_card_design {
     .work_card_design_in {
@@ -24,8 +24,8 @@
                 border-radius: 50rem;
                 font-size: 1.6rem;
                 font-weight: 500;
-                background-color: $bodybg;
-                border: 2px solid $lighttextclr;
+                background-color: var.$bodybg;
+                border: 2px solid var.$lighttextclr;
                 outline: none;
                 color: white;
             }

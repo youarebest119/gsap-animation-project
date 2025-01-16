@@ -1,4 +1,4 @@
-@import "../../../../assets/theme/_var.scss";
+@use "../../../../assets/theme/_var.scss";
 
 .me_design {
     text-align: center;
@@ -13,14 +13,14 @@
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 4rem;
-        color: rgba($white, 1);
+        color: rgba(var.$white, 1);
     }
 
     p {
         font-size: 6rem;
         font-weight: 500;
         text-transform: uppercase;
-        color: rgba($white, 1);
+        color: rgba(var.$white, 1);
         .l {
             overflow: clip;
         }

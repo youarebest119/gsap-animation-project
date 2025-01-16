@@ -13,7 +13,7 @@ const AboutSlider = () => {
                     trigger: ".about_slider",
                     pin: true,
                     end: "+=200%",
-                    markers: true,
+                    markers: false,
                     // toggleActions: "play reverse none none",
                     scrub: 1,
                 }

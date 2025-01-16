@@ -1,4 +1,4 @@
-@import "../../../../assets/theme/_var.scss";
+@use "../../../../assets/theme/_var.scss";
 
 .about_banner {
     min-height: 100dvh;
@@ -52,7 +52,7 @@
                 width: 100%;
                 border-radius: inherit;
                 height: 100%;
-                background-color: $baseclr;
+                background-color: var.$baseclr;
                 transform-origin: left;
                 transform: scaleX(0);
             }
