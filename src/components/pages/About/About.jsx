@@ -10,6 +10,7 @@ import CyberConvoy from './CyberConvoy/CyberConvoy';
 import Bts from './Bts/Bts';
 import Heights from './Heights/Heights';
 import Responsibility from './Responsibility/Responsibility';
+import ImageBlur from "./ImageBlur/ImageBlur";
 
 const About = () => {
     return (
@@ -22,9 +23,9 @@ const About = () => {
             <AboutGallery />
             <CyberConvoy />
             <Bts />
-            {/* <div style={{ height: "100dvh", border: "2px solid white" }} /> */}
             <Responsibility />
-            {/* <Heights /> */}
+            <ImageBlur />
+            <Heights />
             {/* <Jungle /> */}
             {/* <div style={{ height: "100dvh", border: "2px solid white" }} /> */}
             {/* <AboutSlider /> */}

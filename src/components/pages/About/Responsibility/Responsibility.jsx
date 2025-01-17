@@ -62,7 +62,7 @@ const Responsibility = () => {
             scrollTrigger: {
                 trigger: ref.current,
                 start: "top 80%",
-                markers: true,
+                markers: false,
                 toggleActions: "play none none reverse",
                 end: "top 20%",
             }
@@ -88,13 +88,13 @@ const Responsibility = () => {
             .timeline()
             .to(event.currentTarget.querySelectorAll(".l:first-child .c"), {
                 yPercent: -100,
-                stagger: 0.05,
+                stagger: 0.1,
             })
             .fromTo(event.currentTarget.querySelectorAll(".l:last-child .c"), {
                 yPercent: 100,
             }, {
                 yPercent: 0,
-                stagger: 0.05,
+                stagger: 0.1,
             }, "<")
         // console.log(event.currentTarget);
     })
@@ -103,13 +103,11 @@ const Responsibility = () => {
             .timeline()
             .to(event.currentTarget.querySelectorAll(".l:first-child .c"), {
                 yPercent: 0,
-                stagger: 0.05,
+                stagger: 0.1,
             })
-            .fromTo(event.currentTarget.querySelectorAll(".l:last-child .c"), {
-                yPercent: 0,
-            }, {
+            .to(event.currentTarget.querySelectorAll(".l:last-child .c"), {
                 yPercent: 100,
-                stagger: 0.05,
+                stagger: 0.1,
             }, "<")
     })
     return (
