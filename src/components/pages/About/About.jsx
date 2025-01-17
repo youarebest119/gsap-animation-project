@@ -11,6 +11,7 @@ import Bts from './Bts/Bts';
 import Heights from './Heights/Heights';
 import Responsibility from './Responsibility/Responsibility';
 import ImageBlur from "./ImageBlur/ImageBlur";
+import ThreeDCard from './ThreeDCard/ThreeDCard';
 
 const About = () => {
     return (
@@ -26,6 +27,7 @@ const About = () => {
             <Responsibility />
             <ImageBlur />
             <Heights />
+            <ThreeDCard />
             {/* <Jungle /> */}
             {/* <div style={{ height: "100dvh", border: "2px solid white" }} /> */}
             {/* <AboutSlider /> */}
